@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+:root {
+	--font-muli: "Muli", sans-serif;
+	--font-play-fair: "Playfair Display", serif;
+	--font-bebas: "Bebas Neue", cursive;
+
+	--color-dark: #2e3038;
+	--color-white: #ffffff;
+	--color-turquoise-blue: #06aaca;
+	--color-teal-blue: #00859f;
+	--color-gray: #8b92ab;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: var(--font-play-fair);
+}
+.section-title {
+	font-family: var(--font-play-fair);
+	font-size: 72px;
+	font-weight: bold;
+}
+.d-flex--center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.section-container {
+	margin: 0 100px;
+}
+.section-text {
+	font-size: 18px;
+	line-height: 1.5;
+	font-family: var(--font-muli);
+}
+.text--white {
+	color: var(--color-white);
+}
+.text--gray {
+	color: var(--color-gray);
+}
+.text--dark {
+	color: var(--color-dark);
+}
+.button {
+	font-family: Muli;
+	font-size: 18px;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.13;
+	letter-spacing: normal;
+	border-radius: 38px;
+	padding: 15px 60px;
+}
+.button-white {
+	background: transparent;
+	color: white;
+	border: 2px solid white;
+}
+.button-blue {
+	background:var(--color-turquoise-blue);
+	color: white;
+	border: 2px solid var(--color-turquoise-blue);
+}
+
+@media (max-width: 500px) {
+	.section-container {
+		margin: 0 20px;
+	}
+}
+.footer {
+	background: url("../assets/pozadina.svg");
+	background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 0 !important;
+    position: relative;
+	width: 100%;
+	height: 335px;
+}
+.djevojcica {
+	position: absolute;
+	z-index: 100 !important;
+    overflow: hidden !important;
+    top: -30;
+	height: 351px;
+	width: 448px;
+	left: -43px;
+    top: -16px;
+}
