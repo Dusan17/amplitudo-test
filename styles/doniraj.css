@@ -64,3 +64,10 @@
 .donation-cart-item:hover > img {
 	display: block;
 }
+.popup1 {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	background-color: white;
+}
