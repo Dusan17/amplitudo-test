@@ -10,6 +10,10 @@ let donationItems = [
 
 let selectedCategory = "odjeca";
 
+function countSelected() {
+	 return donationItems.filter(item => item.selected).length;
+}
+
 function selectCategory(category) {
 	if (category === selectedCategory) {
 		return;
@@ -50,6 +54,24 @@ function renderDonationCart() {
           <img src="./assets/close.svg"/>
         </div>`;
 		});
+		buttonHandler();
+}
+function addButton() {
+	let buttonWrapper = document.querySelector(".btn-wrapper");
+	if(buttonWrapper.innerHTML == ""){ 
+		buttonWrapper.innerHTML += `
+		<button class="button button-blue mt-5" onclick="showForm()">Doniraj </button>`;
+	}
+}
+function removeButton() {
+	if(countSelected() == 0) {
+		let buttonWrapper = document.querySelector(".btn-wrapper");
+		buttonWrapper.innerHTML = "";
+	}
+}
+function buttonHandler() {
+	addButton();
+	removeButton();
 }
 
 function removeItemFromCart(id) {
@@ -65,5 +87,7 @@ function selectDonationItem(id) {
 	renderDonationItems();
 	renderDonationCart();
 }
-
+function showForm() {
+	
+}
 renderDonationItems();

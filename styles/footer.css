@@ -1,0 +1,19 @@
+.footer {
+	padding: 0;
+	height: 320px;
+	background: url("../assets/pozadina.svg");
+}
+.footer__image {
+	height: 349px;
+	position: relative;
+	top: -30px;
+}
+.footer__image > img {
+	height: 100%;
+}
+.img-wrapper > img{
+    width: 188px;
+}
+.social-links {
+    padding: 0 65px;
+}

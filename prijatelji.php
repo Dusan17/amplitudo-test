@@ -6,9 +6,12 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/prijatelji.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
     <title>Prijatelji</title>
 </head>
 <body>
+<?php include "./components/header.html"; ?>
     <div class="friends">
         <section class="friends-info">
             <div class="section-container row justify-content-between">
@@ -30,5 +33,6 @@
             </div>
         </section>
     </div>
+    <?php include "./components/footer.html"; ?>
 </body>
 </html>

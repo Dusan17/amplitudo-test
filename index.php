@@ -3,12 +3,16 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="js/jquery-3.5.1.min.js"></script>
 		<link rel="stylesheet" href="styles/bootstrap.min.css" />
 		<link rel="stylesheet" href="styles/index.css" />
 		<link rel="stylesheet" href="styles/home.css" />
+		<link rel="stylesheet" href="styles/header.css">
+		<link rel="stylesheet" href="styles/footer.css">
 		<title>Moj osmijeh</title>
 	</head>
 	<body>
+		<?php include "./components/header_index.html"; ?>
 		<div class="home">
 			<section class="home-intro">
 				<div class="section-container">
@@ -102,14 +106,14 @@
 						<form>
 							<div class="form-row mt-5">
 							  <div class="form-group col-md-6">
-								<input type="text" class="form-control form-input"  placeholder="Ime i prezime">
+								<input type="text" class="form-control form-style"  placeholder="Ime i prezime">
 							  </div>
 							  <div class="form-group col-md-6">
-								<input type="email" class="form-control form-input"  placeholder="Email">
+								<input type="email" class="form-control form-style"  placeholder="Email">
 							  </div>
 							</div>
 							<div class="form-group mt-5">
-							  <input type="text" class="form-control form-input"  placeholder="Poruka">
+							  <input type="text" class="form-control form-style"  placeholder="Poruka">
 							</div>
 							<button class="button button-blue mt-5">
 								Posalji
@@ -128,5 +132,18 @@
 				</div>
 			</section>
 		</div>
+		<?php include "./components/footer.html"; ?>
 	</body>
+	<script>
+		$(window).on("scroll", function() {
+    if($(window).scrollTop() > 50) {
+        $("#header-index").addClass("header-active");
+        $("#nav-img").addClass("logo-img-active");
+    } else {
+        //remove the background property so it comes transparent again (defined in your css)
+       $("#header-index").removeClass("header-active");
+       $("#nav-img").removeClass("logo-img-active");
+    }
+});
+	</script>
 </html>

@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css" />
     <link rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="styles/galerija.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
     <title>Galerija</title>
 </head>
 <style>
@@ -17,6 +19,7 @@
 }   
 </style>
 <body>
+<?php include "./components/header.html"; ?>
     <div class="galerija">
         <section class="galerija-pictures">
             <div class="section-container row justify-content-between" style="margin-top: 150px;">
@@ -34,5 +37,6 @@
         </div>
         </section>  
     </div>
+    <?php include "./components/footer.html"; ?>
 </body>
 </html>

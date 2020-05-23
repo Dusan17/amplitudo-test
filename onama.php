@@ -6,9 +6,17 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css" />
     <link rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
     <title>O nama</title>
+    <style>
+      .about-us {
+        margin-top: 100px;
+      }
+    </style>
   </head>
   <body>
+  <?php include "./components/header.html"; ?>
     <div class="about-us">
       <section class="about-us-intro">
         <div class="section-container row justify-content-between">
@@ -109,4 +117,5 @@
       </section>
     </div>
   </body>
+  <?php include "./components/footer.html"; ?>
 </html>

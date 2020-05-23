@@ -1,11 +1,15 @@
-.header-wrapper {
-  margin: 10px 100px;
-}
+/* .header-wrapper {
+  margin: 0px 100px;
+  background-color: white;
+} */
 #navbarNavAltMarkup {
     /* justify-content: flex-end; */
     font-family: var(--font-muli);
     font-size: 18px;
     color: var(--color-gray);
+    margin-right: 100px;
+    
+
 }
 
 .hover-link::after {
@@ -18,4 +22,24 @@
 
 .hover-link:hover::after {
     transform: scaleX(1);
+}
+#header {
+    background-color: white;
+}
+#header-index {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.header-active {
+    background-color: white;
+}
+
+.logo {
+    margin-left:100px;
+}
+.logo-img {
+    content:url("../assets/logo-trans.png");
+}
+.logo-img-active {
+    content:url("../assets/osmijeh-logo.jpg");
 }
