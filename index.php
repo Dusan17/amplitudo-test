@@ -4,11 +4,18 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="styles/bootstrap.min.css" />
 		<link rel="stylesheet" href="styles/index.css" />
 		<link rel="stylesheet" href="styles/home.css" />
 		<link rel="stylesheet" href="styles/header.css">
 		<link rel="stylesheet" href="styles/footer.css">
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+		
+		
 		<title>Moj osmijeh</title>
 	</head>
 	<body>
@@ -52,7 +59,7 @@
 			</section>
 			<section class="home-about">
 				<div class="section-container row justify-content-between">
-					<div class="col-md-5 col-12">
+					<div data-aos="fade-right" class="col-md-5 col-12">
 						<h1 class="section-title text--dark mb-5">Ko smo mi?</h1>
 						<div class="d-flex">
 							<div>
@@ -72,7 +79,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="col-md-5 col-12 home-about__image">
+					<div data-aos="fade-left" class="col-md-5 col-12 home-about__image">
 						<!-- <div class="home-about__circle"></div> -->
 						<img src="./assets/slika1.jpg" class="img-fluid" />
 					</div>
@@ -80,13 +87,49 @@
 			</section>
 			<section class="home-news">
 			<div class="section-container row justify-content-between">
-				<div class="col-md-5 col-12">
-					<h1 class="section-title text--dark mb-5">Vijesti</h1>
-					<div class="d-flex">
-						<div>
-							<img src="./assets/children.jpg" alt="" class="img-fluid" />
+				<h1 class="section-title text--dark mb-5">Vijesti</h1>
+				<div class="news-content">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="./assets/children.jpg" alt="">
+								<div class="news-description">
+									<h3>Lorem ipsum dolor amet, consectetur adipiscing</h3>
+									<p class="section-text">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.
+									</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="./assets/smajli.jpg" alt="">
+								<div class="news-description">
+									<h3>Lorem ipsum dolor amet, consectetur adipiscing</h3>
+									<p class="section-text">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.
+									</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="./assets/children.jpg" alt="">
+								<div class="news-description">
+									<h3>Lorem ipsum dolor amet, consectetur adipiscing</h3>
+									<p class="section-text">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.
+									</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="./assets/smajli.jpg" alt="">
+								<div class="news-description">
+									<h3>Lorem ipsum dolor amet, consectetur adipiscing</h3>
+									<p class="section-text">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.
+									</p>
+								</div>
 						</div>
-					</div>
+					<!-- Add Pagination -->
+						<!-- <div class="swiper-pagination"></div> -->
+				</div>
 				</div>
 			</section>
 			<section class="home-contact">
@@ -133,8 +176,37 @@
 			</section>
 		</div>
 		<?php include "./components/footer.html"; ?>
-	</body>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script>
+    AOS.init();
+  </script>
 	<script>
+		$(document).ready(function () {
+  //initialize swiper when document ready
+		var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+			},
+			breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 50,
+        },
+      }
+		});
+	});
 		$(window).on("scroll", function() {
     if($(window).scrollTop() > 50) {
         $("#header-index").addClass("header-active");
@@ -144,6 +216,8 @@
        $("#header-index").removeClass("header-active");
        $("#nav-img").removeClass("logo-img-active");
     }
-});
+	});
 	</script>
+	</body>
+
 </html>

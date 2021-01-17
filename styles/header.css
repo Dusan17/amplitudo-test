@@ -2,7 +2,7 @@
   margin: 0px 100px;
   background-color: white;
 } */
-#navbarNavAltMarkup {
+#navbarNav {
     /* justify-content: flex-end; */
     font-family: var(--font-muli);
     font-size: 18px;
@@ -10,6 +10,9 @@
     margin-right: 100px;
     
 
+}
+.navbar-collapse {
+    text-align: center;
 }
 
 .hover-link::after {

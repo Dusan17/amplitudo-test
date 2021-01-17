@@ -1,9 +1,9 @@
 .doniraj-intro {
   padding-top: 150px;
 }
-.img-fluid {
+/* .img-fluid {
   margin-top: -150px;
-}
+} */
 .heading-container {
   margin-top: 150px;
   text-align: center;
@@ -95,9 +95,90 @@
   padding-left: 10px;
 }
 .circle {
-    border-radius: 50%;
-    width: 137px;
-    height: 137px;
-    /* box-shadow: 0 3px 18px 0 rgba(6, 170, 202, 0.3); */
-    background-color:#cccccc;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 137px;
+  height: 137px;
+  /* box-shadow: 0 3px 18px 0 rgba(6, 170, 202, 0.3); */
+  background-color: #cccccc;
 }
+.circle:hover,
+.circle--active {
+  background-color: var(--color-turquoise-blue);
+}
+.popup-step {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100000;
+  background: white;
+  overflow: auto;
+}
+.close-step {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+.close-step img {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  color: #95989a;
+}
+.select-gender {
+  margin-right: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.select-gender span {
+  margin-top: 10px;
+}
+.select-gender--active {
+  color: var(--color-turquoise-blue);
+}
+.review-group-title {
+  font-size: 24px;
+  font-family: var(--font-muli);
+  color: var(--color-gray);
+  margin-bottom: 20px;
+}
+.review-form-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #c6c9d6;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #8b92ab;
+}
+.review-form-item__label {
+  text-transform: capitalize;
+  font-weight: 300;
+}
+.review-form-item__value {
+  font-weight: 500;
+}
+.review-item__header {
+  cursor: pointer;
+  padding: 15px 13px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+}
+.review-item__body {
+  margin-top: 1px;
+  background: #fafbff;
+  padding: 22px 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+}
+/* #popup-review {
+  overflow-y: scroll;
+} */

@@ -1,3 +1,15 @@
 .friends {
     margin-top: 100px;
 }
+.wrapper {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
+    grid-gap: 1em;
+}
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 387px;
+    height: 261px;
+    background: white;
+}
